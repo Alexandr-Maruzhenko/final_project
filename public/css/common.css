@@ -1,0 +1,86 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+    /* добавим плавность переходов для всех элементов страницы*/
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+body {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #373737;
+    background: #f7f7f7;
+}
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* стилевой класс, который управляет шириной контейнера сетки*/
+
+.wrapper{
+    position:fixed; /*Отсоединяем контейнер от страницы и фиксируем в окне браузера*/
+    width: 100%;   /*Ширина на все окно браузера*/
+    height: 100%;  /*Высота на все окно браузера*/
+    /*background-color: pink;*/
+    display: flex; /*Превращаем контейнер в flexBox*/
+    flex-direction: column; /*Расставляем дочерние элементы по вертикали*/
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    padding: 0 30px;
+
+    /*background-color: aliceblue;*/
+    overflow-y:auto; /*Вертикальная полоса прокрутки для текста*/
+    /*padding: 10px; !*отступы текста со всех сторон*!*/
+    text-align: justify; /*выравнивание текста по левому и правому краям*/
+    flex-grow: 1; /*Предписываем занять все свободное пространство*/
+}
+
+.container-categories a{
+    text-decoration: none;
+}
+
+.container-categories ul{
+    padding: 0;
+}
+
+.container-categories li{
+    list-style-type: none;
+    display: inline;
+}
+
+
+.container-footer{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+    padding: 0 30px;
+
+    /*!*background-color: aliceblue;*!*/
+    /*overflow-y:auto; !*Вертикальная полоса прокрутки для текста*!*/
+    /*!*padding: 10px; !*отступы текста со всех сторон*!*!*/
+    /*text-align: justify; !*выравнивание текста по левому и правому краям*!*/
+    /*flex-grow: 1; !*Предписываем занять все свободное пространство*!*/
+}
